@@ -7,7 +7,7 @@ const DateSlider = ({ dates }) => {
   return (
     <ListGroup horizontal='sm'>
         {dates.map((date, index) => (
-          <ListGroup.Item style={{zIndex: index * -1 + 99999999}}>
+          <ListGroup.Item key={index} style={{zIndex: index * -1 + 99999999}}>
              <DaySelector date={date}/>
              {date.selection != 'none' && 
               <ExtrasSelector date={date} />}

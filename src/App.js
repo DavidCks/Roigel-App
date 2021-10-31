@@ -43,7 +43,7 @@ function App() {
       day: 'Sa',
       date: '6',
       month: 'Okt',
-      selection: 'none',
+      selection: 'meat',
       extraMeat: 0,
       extraVegi: 2
     },
