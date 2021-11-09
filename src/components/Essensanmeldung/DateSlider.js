@@ -6,13 +6,13 @@ import ExtrasSelector from './ExtrasSelector'
 const DateSlider = ({ dates }) => {
   return (
     <ListGroup horizontal='sm'>
-        {dates.map((date, index) => (
-          <ListGroup.Item key={index} style={{zIndex: index * -1 + 99999999}}>
-             <DaySelector date={date}/>
-             {date.selection != 'none' && 
-              <ExtrasSelector date={date} />}
-          </ListGroup.Item>))}
-      </ListGroup>
+      {dates[0].map((date, index) => index !== 0 && (
+        <ListGroup.Item key={index} style={{zIndex: index * -1 + 99999999}}>
+            <DaySelector date={date}/>
+            {date.selection !== 'none' && 
+            <ExtrasSelector date={date} />}
+        </ListGroup.Item>))}
+    </ListGroup>
   )
 }
 

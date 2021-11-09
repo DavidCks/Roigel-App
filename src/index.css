@@ -310,3 +310,54 @@ footer {
   justify-content: center;
   width: 100vw !important;
 }
+.full_day_display_box {
+  margin-top: 15px !important;
+  width: calc(100% - 10px);
+  padding: 10px;
+  background: linear-gradient(120deg, rgba(229,230,236,1) 0%, rgba(242,243,246,1) 100%);
+  box-shadow: -6px -6px 16px rgba(255, 255, 255, 0.45), 3px 3px 4px rgba(209, 205, 199, 0.3);
+  border-radius: 20px;
+}
+.big_first::first-letter {
+  font-size: 22px;
+}
+p.big_first {
+  font-size: 18px;
+}
+.center {
+  text-align: center;
+} 
+.bold {
+  font-weight: bold;
+  color: #2C3036;
+}
+p.sub {
+  margin-top: -8px !important;
+  padding-bottom: 8px !important;
+  font-size: 14px;
+}
+.names_and_extras {
+  margin-bottom: -16px;
+}
+.full_day_display_entry {
+  display: grid; 
+  grid-template-columns: 2fr 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". ."; 
+}
+.full_extras_display_today {
+  padding-left: 15px;
+  margin-top: 2px !important;
+  z-index: 0;
+}
+.small-p {
+  font-size: 14px;
+}
+.selection-single {
+  margin-top: 3px;
+  margin-left: -5px;
+  width: 2%;
+  float: left;
+}
