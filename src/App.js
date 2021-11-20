@@ -20,22 +20,25 @@ function App() {
         day: 'Di',
         date: '2',
         month: 'Okt',
+        year: '2021',
         selection: 'meat',
-        extraMeat: 1,
+        extraMeat: 3,
         extraVegi: 1
       },
       {
         day: 'Mi',
         date: '3',
         month: 'Okt',
+        year: '2021',
         selection: 'meat',
-        extraMeat: 2,
+        extraMeat: 1,
         extraVegi: 1
       },
       {
         day: 'Do',
         date: '4',
         month: 'Okt',
+        year: '2021',
         selection: 'vegi',
         extraMeat: 5,
         extraVegi: 4
@@ -44,6 +47,7 @@ function App() {
         day: 'Fr',
         date: '5',
         month: 'Okt',
+        year: '2021',
         selection: 'none',
         extraMeat: 0,
         extraVegi: 2
@@ -52,17 +56,19 @@ function App() {
         day: 'Sa',
         date: '6',
         month: 'Okt',
+        year: '2021',
         selection: 'meat',
         extraMeat: 0,
-        extraVegi: 2
+        extraVegi: 3
       },
       {
         day: 'So',
         date: '7',
         month: 'Okt',
+        year: '2021',
         selection: 'none',
         extraMeat: 0,
-        extraVegi: 2
+        extraVegi: 1
       }
     ],
     [
@@ -73,16 +79,18 @@ function App() {
         day: 'Di',
         date: '2',
         month: 'Okt',
+        year: '2021',
         selection: 'none',
-        extraMeat: 3,
+        extraMeat: 2,
         extraVegi: 1
       },
       {
         day: 'Mi',
         date: '3',
         month: 'Okt',
+        year: '2021',
         selection: 'meat',
-        extraMeat: 2,
+        extraMeat: 0,
         extraVegi: 1
       }
     ],
@@ -94,6 +102,7 @@ function App() {
         day: 'Di',
         date: '2',
         month: 'Okt',
+        year: '2021',
         selection: 'vegi',
         extraMeat: 3,
         extraVegi: 2
@@ -107,8 +116,9 @@ function App() {
         day: 'Di',
         date: '2',
         month: 'Okt',
-        selection: 'vegi',
-        extraMeat: 0,
+        year: '2021',
+        selection: 'meat',
+        extraMeat: 5,
         extraVegi: 1
       }
     ],

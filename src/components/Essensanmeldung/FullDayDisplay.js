@@ -11,7 +11,7 @@ const FullDayDisplay = ({ dates }) => {
           // exclude entries that have selected none
           /* [1]st element is always going to be todays date entry */
           perUser[1].selection !== 'none' && 
-          (<>
+          (<div key={index}>
             {/* exclude the first entry from the hacky upward moving so stuff aligns properly */}
             <div style={{ marginTop: `${index !== 0 ? '-18px' : '0px'}` }} className='full_day_display_entry'>
               <span className='small-p'> 
@@ -27,7 +27,7 @@ const FullDayDisplay = ({ dates }) => {
                 <g strokeWidth="2"/>
                 <path d="m1000 0.13229-1000 1e-8" fill="#e50000" stroke="#959595" strokeWidth="2"/>
             </svg>
-          </>)
+          </div>)
         )}
       </div>
     </div>
