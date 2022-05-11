@@ -1,7 +1,8 @@
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import { useState } from "react"
 import { useEffect } from 'react'
 import Essensanmeldung from './components/Essensanmeldung/Essensanmeldung';
+import Kahnbuch from './components/Kahnbuch/Kahnbuch';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 
@@ -127,7 +128,16 @@ function App() {
   return (
     <> 
       <Header />
-      <Essensanmeldung dates={dates} />
+      <Router>
+        <Switch>
+          <Route path="/essen">
+            <Essensanmeldung dates={dates} />
+          </Route>
+          <Route path="/kahn">
+            <Kahnbuch />
+          </Route>
+        </Switch>
+      </Router>
       <Footer />
     </>
   );

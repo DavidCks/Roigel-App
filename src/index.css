@@ -417,3 +417,90 @@ p.sub {
   color: #575F6B;
   font-weight: bolder;
 }
+
+/* KahnCalendar */
+
+.react-calendar { 
+  font-family: SegoeUI, Arial, sans-serif;
+  color: #575F6B;
+  border-color: rgba(0,0,0,0) !important;
+  height: auto;
+  width: calc(100% - 12px - 8px);
+  margin: 5px;
+  padding: 7px !important;
+  padding-bottom: 14px !important;
+  border-radius: 13px !important;
+  background: linear-gradient(var(--gradient-degree), #E5E6EC, #F2F3F6);
+  box-shadow:  2px 2px 4px #D1CDC7,
+              -1px -1px 4px rgb(255, 255, 255);
+ }
+ .react-calendar__navigation {
+  display: flex;
+ }
+ .react-calendar__navigation button {
+  margin: .2em;
+  color: #575F6B;
+ }
+ .react-calendar__navigation__arrow {
+  box-shadow: -6px -6px 16px #ffffffc9, 3px 3px 30px #57575733;
+  border-radius: 13px !important;
+  background: linear-gradient(var(--gradient-degree), #E5E6EC, #F2F3F6);
+  text-align: center;
+  border: unset;
+  width: .8em;
+  font-size: 3em;
+ }
+.react-calendar__navigation__label__labelText, .react-calendar__navigation__arrow {
+  height: .8em;
+}
+.react-calendar__navigation__label__labelText, .react-calendar__navigation__label{
+  width: 50%;
+  background-color: unset;
+  border: unset !important;
+  border-color: unset !important;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+.calendar-navigation-arrow__right, .calendar-navigation-arrow__left {
+  margin-top: -48px;
+  
+}
+.calendar-navigation-arrow__right {
+  margin-left: 2px;
+}
+.calendar-navigation-arrow__left {
+  margin-left: -2px;
+}
+.react-calendar__month-view__weekdays__weekday {
+ text-align: center;
+ color: #575F6B;
+ text-decoration: none;
+ height: 2em;
+ margin-top: 1em;
+ text-transform: uppercase;
+}
+
+.react-calendar__month-view__days__day {
+ border: none;
+ height: 2.5em;
+ color: #575F6B;
+ background-color: unset;
+ border-radius: 50%;
+ flex: 0 0 2.5em !important;
+ margin-left: calc((7 * 2.5em - 100%) / -14);
+ margin-right: calc((7 * 2.5em - 100%) / -14);
+}
+
+abbr {
+  text-decoration: none !important;
+}
+.react-calendar__month-view__days__day:active, .react-calendar__month-view__days__day:focus {
+  box-shadow: inset 2px 2px 6px #bebebe,
+              inset -2px -2px 6px #ffffff;
+  color: #7C00E8;
+}
+.reserved {
+  box-shadow: -6px -6px 16px rgb(255, 255, 255), 3px 3px 6px rgb(209, 205, 199);
+  color: #7C00E8;
+}
