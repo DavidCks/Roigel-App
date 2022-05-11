@@ -137,8 +137,8 @@ function App() {
             <Kahnbuch />
           </Route>
         </Switch>
+        <Footer Link={Link} />
       </Router>
-      <Footer />
     </>
   );
 }

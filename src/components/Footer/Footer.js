@@ -4,7 +4,7 @@ import BurgerMenuGradientSVG from "./BurgerMenuGradientSVG"
 import EssenGradientSVG from "./EssenGradientSVG"
 import { Container, Row, Col } from "react-bootstrap"
 
-const Footer = () => {
+const Footer = ({Link}) => {
   return (
     <footer>
       <Container fluid className='navbar'>
@@ -16,10 +16,14 @@ const Footer = () => {
             <NavButton Icon={BurgerMenuGradientSVG}/>
           </Col>
           <Col>
-            <NavButton Icon={EssenGradientSVG}/>
+            <Link to="/essen">
+              <NavButton Icon={EssenGradientSVG}/>
+            </Link>
           </Col>
           <Col>
-            <NavButton Icon={KahnGradientSVG}/>
+            <Link to="/kahn">
+              <NavButton Icon={KahnGradientSVG}/>
+            </Link>
           </Col>
         </Row>
       </Container>
