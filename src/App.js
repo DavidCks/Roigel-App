@@ -106,7 +106,7 @@ function App() {
         year: '2021',
         selection: 'vegi',
         extraMeat: 3,
-        extraVegi: 2
+        extraVegi: 3
       }
     ],
     [
