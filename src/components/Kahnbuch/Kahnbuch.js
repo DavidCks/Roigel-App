@@ -9,7 +9,6 @@ const Kahnbuch = () => {
   const [time1Value, setTime1Value] = useState(new Date());
   const [time2Value, setTime2Value] = useState(new Date());
   const [date, setDate] = useState(new Date());
-  const [time, setTime] = useState()
   const [reserved, setReserved] = useState([
     "Jonas Dransfeld",
     new Date("May 21, 2022"),

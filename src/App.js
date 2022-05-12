@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import { useState } from "react"
 import { useEffect } from 'react'
 import Essensanmeldung from './components/Essensanmeldung/Essensanmeldung';
@@ -127,18 +127,14 @@ function App() {
 
   return (
     <> 
-      <Header />
-      <Router>
-        <Switch>
-          <Route path="/essen">
-            <Essensanmeldung dates={dates} />
-          </Route>
-          <Route path="/kahn">
-            <Kahnbuch />
-          </Route>
-        </Switch>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/essen" element={<Essensanmeldung dates={dates} />}/>
+          <Route path="/kahn" element={<Kahnbuch />} />
+        </Routes>
         <Footer Link={Link} />
-      </Router>
+      </BrowserRouter>
     </>
   );
 }
