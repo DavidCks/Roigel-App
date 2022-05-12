@@ -5,6 +5,8 @@ import Essensanmeldung from './components/Essensanmeldung/Essensanmeldung';
 import Kahnbuch from './components/Kahnbuch/Kahnbuch';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import Login from './components/Auth/Login';
+import { Auth0Provider } from "@auth0/auth0-react";
 
 function App() {
   //structure: array of array of dates
@@ -127,14 +129,21 @@ function App() {
 
   return (
     <> 
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/essen" element={<Essensanmeldung dates={dates} />}/>
-          <Route path="/kahn" element={<Kahnbuch />} />
-        </Routes>
-        <Footer Link={Link} />
-      </BrowserRouter>
+      <Auth0Provider
+        domain="wild-rice-9335.eu.auth0.com"
+        clientId="ksJGSVS9aHEoMofivxzJePoBMgjoGuaY"
+        redirectUri={window.location.origin}
+      >
+        <BrowserRouter>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Login/>}></Route>
+            <Route path="/essen" element={<Essensanmeldung dates={dates} />}/>
+            <Route path="/kahn" element={<Kahnbuch />} />
+          </Routes>
+          <Footer Link={Link} />
+        </BrowserRouter>
+      </Auth0Provider>
     </>
   );
 }
