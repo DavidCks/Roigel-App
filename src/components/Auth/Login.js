@@ -5,7 +5,6 @@ const Login = () => {
 
   return (
     <>
-    {window.location.origin}
     <button onClick={() => loginWithRedirect()}>Log In</button>
     </>
   )

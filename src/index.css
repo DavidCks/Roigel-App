@@ -33,6 +33,10 @@ body {
   overflow-x: hidden !important;
 }
 
+a {
+  color: unset !important;
+}
+
 body, h1, h2, h3, h4, h5, h6, p {
   font-family: SegoeUI, Arial, sans-serif;
   color: #575F6B;

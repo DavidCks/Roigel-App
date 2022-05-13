@@ -6,7 +6,9 @@ import Kahnbuch from './components/Kahnbuch/Kahnbuch';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Login from './components/Auth/Login';
-import { Auth0Provider } from "@auth0/auth0-react";
+import Profile from './components/Profile/Profile';
+import Err404 from './components/Err404/Err404';
+import Authenticate from './components/Auth/Authenticate';
 
 function App() {
   //structure: array of array of dates
@@ -129,21 +131,18 @@ function App() {
 
   return (
     <> 
-      <Auth0Provider
-        domain="wild-rice-9335.eu.auth0.com"
-        clientId="ksJGSVS9aHEoMofivxzJePoBMgjoGuaY"
-        redirectUri={window.location.origin}
-      >
-        <BrowserRouter>
-          <Header />
-          <Routes>
-            <Route path="/" element={<Login/>}></Route>
-            <Route path="/essen" element={<Essensanmeldung dates={dates} />}/>
-            <Route path="/kahn" element={<Kahnbuch />} />
-          </Routes>
-          <Footer Link={Link} />
-        </BrowserRouter>
-      </Auth0Provider>
+      <BrowserRouter>
+        <Header Link={Link}/>
+        <Routes>
+          <Route path="/" element={<Login/>}></Route>
+          <Route path="/essen" element={<Essensanmeldung dates={dates} />}/>
+          <Route path="/kahn" element={<Kahnbuch />} /> 
+          <Route path="/profile" element={<Profile/>}/>
+          <Route path="*" element={<Err404 Link={Link}/>}/>
+          <Route path="/authenticate" element={<Authenticate/>}/>
+        </Routes>
+        <Footer Link={Link} />
+      </BrowserRouter>
     </>
   );
 }

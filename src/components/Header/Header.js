@@ -3,7 +3,7 @@ import Zirkel from "./Zirkel"
 import BackgroundBand from "./BackgroundBand"
 import UserButton from "./UserButton"
 
-const Header = () => {
+const Header = ({Link}) => {
   return (
     <header>
       <BackgroundBand />
@@ -14,7 +14,9 @@ const Header = () => {
             <Zirkel className='Zirkel'/>
           </Col>
           <Col>
-            <UserButton />
+            <Link to="/profile">
+              <UserButton />
+            </Link>
           </Col>
         </Row>
       </Container>
